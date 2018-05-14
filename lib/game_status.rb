@@ -27,12 +27,12 @@ WIN_COMBINATIONS.each do |win_combination|
   nil
   end
 
-  def full?(board)
+def full?(board)
     !board.any? {|x|
       x == " "}
   end
 
-  def draw?(board)
+def draw?(board)
     if
       won?(board)
     else
@@ -40,9 +40,9 @@ WIN_COMBINATIONS.each do |win_combination|
 end
   end
 
-  def over?(board)
+def over?(board)
 won?(board) || draw?(board) || full?(board)
-      end
+end
 
 def winner(board)
 if index = won?(board)
